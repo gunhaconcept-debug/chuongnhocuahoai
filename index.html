@@ -9,54 +9,68 @@
 <body>
 <div class="shell">
   <div class="header">
-    <div class="logo">📚 Chuồng nhỏ của Hoài</div>
+    <a class="logo" href="./">📚 Chuồng nhỏ của Hoài</a>
     <div class="nav">
-      <a class="mini" href="https://monkeydd.com/nhom-dich/2837" target="_blank" rel="noopener">🏠 MonkeyD</a>
+      <a class="mini" href="https://monkeydd.com/nhom-dich/2837" target="_blank" rel="noopener">📖 MonkeyD</a>
+      <a class="mini" href="https://monkeydaudio.com/nhom-dich/2837" target="_blank" rel="noopener">🎧 MonkeyDAudio</a>
     </div>
   </div>
 
-  <div class="hero">
-    <h1>Truyện • Audio • Góc ủng hộ ❤️</h1>
-    <p>Kho truyện của Chuồng nhỏ của Hoài, đồng bộ từ MonkeyD.</p>
-  </div>
+  <section class="team-profile">
+    <div id="teamAvatar" class="team-avatar">📚</div>
+    <div class="team-copy">
+      <h1 id="teamName">Chuồng nhỏ của Hoài</h1>
+      <div id="teamDescription" class="team-description"></div>
+      <div class="team-stats">
+        <span>👥 Theo dõi: <b id="teamFollowers">—</b></span>
+        <span>👁 Lượt xem: <b id="teamViews">—</b></span>
+        <span>📚 Số truyện: <b id="teamStories">—</b></span>
+        <span>🎧 Có Audio: <b id="teamAudio">—</b></span>
+      </div>
+      <div id="teamLinks" class="team-links"></div>
+    </div>
+  </section>
 
-  <section class="home-section">
+  <section id="favoriteSection" class="home-section">
     <div class="section-head">
-      <h2>🆕 TRUYỆN MỚI NHẤT</h2>
-      <span id="syncText">Nguồn: MonkeyD</span>
+      <h2>💗 TRUYỆN TÂM ĐẮC NHÀ CHUỒNG NHỎ CỦA HOÀI</h2>
     </div>
-    <div id="newestRail" class="story-rail"></div>
+    <div id="favoriteRail" class="monkey-rail"></div>
   </section>
 
   <section class="home-section">
     <div class="section-head">
       <h2>🔥 TRUYỆN CÓ NHIỀU LƯỢT XEM TRONG THÁNG</h2>
     </div>
-    <div id="monthlyRail" class="story-rail"></div>
+    <div id="monthlyRail" class="monkey-rail"></div>
   </section>
 
   <section class="home-section">
     <div class="section-head list-head">
       <h2>📚 DANH SÁCH TRUYỆN</h2>
-      <span id="count">Đang tải...</span>
+      <span id="syncText">Nguồn: MonkeyD</span>
     </div>
 
-    <div class="filter-panel">
+    <div class="filter-panel monkey-filter">
       <input id="search" class="search" placeholder="🔎 Tìm truyện...">
       <select id="genreFilter" class="select">
         <option value="">Chọn thể loại...</option>
       </select>
-      <div class="filters">
-        <button class="filter active" data-mode="all">Tất cả</button>
-        <button class="filter" data-mode="full">✅ FULL</button>
-        <button class="filter" data-mode="audio">🎧 Có Audio</button>
-      </div>
+      <button class="filter filter-main active" data-mode="all">🔎 Lọc</button>
+    </div>
+
+    <div class="subfilters">
+      <button class="filter active" data-mode="all">Tất cả</button>
+      <button class="filter" data-mode="full">✅ FULL</button>
+      <button class="filter" data-mode="audio">🎧 Có Audio</button>
+      <span id="count" class="story-count">Đang tải...</span>
     </div>
 
     <div id="list" class="list-grid"></div>
     <div id="pager" class="pager"></div>
   </section>
 </div>
+
 <script src="assets/home.js"></script>
 </body>
 </html>

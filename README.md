@@ -1,24 +1,29 @@
-# Chuồng nhỏ của Hoài — GitHub Pages V6.1
+# Chuồng nhỏ của Hoài — V6.2
 
-## Trang chủ
-V6.1 có 3 khu:
-1. **Truyện mới nhất** — lấy thứ tự mới nhất từ phần "Danh sách truyện" của trang team MonkeyD.
-2. **Truyện có nhiều lượt xem trong tháng** — lấy đúng section tương ứng trên MonkeyD.
-3. **Danh sách truyện** — tìm kiếm, lọc thể loại, FULL, Có Audio, phân trang.
+## Bố cục trang chủ
+Thứ tự giống trang team MonkeyD:
+1. Hồ sơ team
+2. Truyện tâm đắc nhà Chuồng nhỏ của Hoài
+3. Truyện có nhiều lượt xem trong tháng
+4. Danh sách truyện
 
-## Ảnh bìa
-Workflow ưu tiên URL ảnh thật (`data-original` / `data-src`) thay vì spinner lazy-load.
-Ảnh được tải về, thu nhỏ và chuyển WebP rồi lưu tại `assets/covers/` để GitHub Pages hiển thị ổn định hơn.
-Ảnh đã có sẽ được giữ lại, không tải lại mỗi lần.
-
-## Chạy
-GitHub → Actions → **Sync all MonkeyD stories** → Run workflow.
-
-Lần chạy V6.1 đầu tiên sẽ lâu hơn V6 vì phải tải/đổi định dạng ảnh bìa.
-Các lần sau nhanh hơn vì ảnh đã tồn tại.
+Danh sách truyện giữ thứ tự MonkeyD từ trang 1 → trang cuối.
 
 ## Audio
-Giữ map audio tại `data/audio-map.json`.
+Không dùng YouTube thủ công nữa.
 
-## Shopee
-Link mặc định trong `data/config.json`.
+Mỗi link:
+`https://monkeydd.com/ten-truyen.html`
+
+tự đổi thành:
+`https://monkeydaudio.com/ten-truyen.html`
+
+Tức là chỉ thay domain, giữ nguyên toàn bộ path phía sau.
+
+## Chạy
+Actions → Sync all MonkeyD stories → Run workflow.
+
+Workflow đúng V6.2 phải thấy:
+- Node 24
+- Install Playwright + Sharp
+- Sync MonkeyD team exactly

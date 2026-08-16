@@ -3,5 +3,6 @@
   "teamUrl": "https://monkeydd.com/nhom-dich/2837",
   "defaultShopee": "https://s.shopee.vn/5ArjEaR2ZS",
   "popupHours": 24,
-  "pageSize": 30
+  "pageSize": 32,
+  "audioBase": "https://monkeydaudio.com"
 }
