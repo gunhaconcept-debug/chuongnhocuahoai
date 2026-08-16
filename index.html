@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="vi">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Chuồng nhỏ của Hoài</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -16,22 +17,45 @@
 
   <div class="hero">
     <h1>Truyện • Audio • Góc ủng hộ ❤️</h1>
-    <p>Toàn bộ truyện của Chuồng nhỏ của Hoài được đồng bộ từ MonkeyD.</p>
-    <input id="search" class="search" placeholder="🔎 Tìm tên truyện hoặc thể loại...">
-    <div class="filters">
-      <button class="filter active" data-mode="all">Tất cả</button>
-      <button class="filter" data-mode="full">✅ FULL</button>
-      <button class="filter" data-mode="audio">🎧 Có Audio</button>
+    <p>Kho truyện của Chuồng nhỏ của Hoài, đồng bộ từ MonkeyD.</p>
+  </div>
+
+  <section class="home-section">
+    <div class="section-head">
+      <h2>🆕 TRUYỆN MỚI NHẤT</h2>
+      <span id="syncText">Nguồn: MonkeyD</span>
     </div>
-  </div>
+    <div id="newestRail" class="story-rail"></div>
+  </section>
 
-  <div class="statsline">
-    <span id="count">Đang tải...</span>
-    <span id="syncText">Nguồn: MonkeyD</span>
-  </div>
+  <section class="home-section">
+    <div class="section-head">
+      <h2>🔥 TRUYỆN CÓ NHIỀU LƯỢT XEM TRONG THÁNG</h2>
+    </div>
+    <div id="monthlyRail" class="story-rail"></div>
+  </section>
 
-  <div id="list" class="grid"></div>
-  <div id="pager" class="pager"></div>
+  <section class="home-section">
+    <div class="section-head list-head">
+      <h2>📚 DANH SÁCH TRUYỆN</h2>
+      <span id="count">Đang tải...</span>
+    </div>
+
+    <div class="filter-panel">
+      <input id="search" class="search" placeholder="🔎 Tìm truyện...">
+      <select id="genreFilter" class="select">
+        <option value="">Chọn thể loại...</option>
+      </select>
+      <div class="filters">
+        <button class="filter active" data-mode="all">Tất cả</button>
+        <button class="filter" data-mode="full">✅ FULL</button>
+        <button class="filter" data-mode="audio">🎧 Có Audio</button>
+      </div>
+    </div>
+
+    <div id="list" class="list-grid"></div>
+    <div id="pager" class="pager"></div>
+  </section>
 </div>
 <script src="assets/home.js"></script>
 </body>

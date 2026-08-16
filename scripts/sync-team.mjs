@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { chromium } from "playwright";
+import sharp from "sharp";
 
 const ROOT = process.cwd();
 const cfg = JSON.parse(await fs.readFile(path.join(ROOT,"data","config.json"),"utf8"));
@@ -10,6 +11,8 @@ const existingMap = new Map(existing.map(x => [x.slug, x]));
 
 const TEAM_URL = cfg.teamUrl;
 const TEAM_PATH = new URL(TEAM_URL).pathname.replace(/\/$/,"");
+const COVER_DIR = path.join(ROOT,"assets","covers");
+await fs.mkdir(COVER_DIR,{recursive:true});
 
 const EXCLUDED_ROOT_HTML = new Set([
   "truyen-moi.html","truyen-hoan-thanh.html","danh-sach-nhom-dich.html",
@@ -24,7 +27,10 @@ function slugFrom(url){
     return p[0].replace(/\.html$/i,"");
   }catch(e){ return ""; }
 }
-
+function parseNumber(v=""){
+  const digits=String(v).replace(/[^\d]/g,"");
+  return digits ? Number(digits) : 0;
+}
 function decode(s=""){
   return s.replace(/&nbsp;/g," ").replace(/&amp;/g,"&").replace(/&quot;/g,'"')
     .replace(/&#39;/g,"'").replace(/&lt;/g,"<").replace(/&gt;/g,">")
@@ -60,16 +66,32 @@ function titleFrom(html){
   const h2=/<h2[^>]*>([\s\S]*?)<\/h2>/i.exec(html);
   return strip(h2?.[1]||"") || meta(html,"og:title") || "";
 }
+function attr(tag,name){
+  const m=new RegExp(`${name}=["']([^"']+)["']`,"i").exec(tag);
+  return m ? decode(m[1]) : "";
+}
+function badImage(url=""){
+  return !url || /^data:/i.test(url) || /spinner|loading|loader|lazy|placeholder|transparent|blank\.(gif|png)/i.test(url);
+}
 function imageFrom(html,title){
   const og=meta(html,"og:image") || meta(html,"twitter:image");
-  if(og) return og;
+  if(!badImage(og)) return og;
+
   const tags=[...html.matchAll(/<img\b[^>]*>/gi)].map(m=>m[0]);
   const norm=s=>strip(s).toLowerCase().replace(/\s+/g," ").trim();
   const nt=norm(title);
+
+  // Ưu tiên data-original/data-src trước src để tránh lấy ảnh spinner lazy-load.
   for(const tag of tags){
-    const alt=/alt=["']([^"']*)["']/i.exec(tag)?.[1]||"";
-    const src=/(?:src|data-src|data-original)=["']([^"']+)["']/i.exec(tag)?.[1]||"";
-    if(src && alt && (norm(alt)===nt || nt.includes(norm(alt)) || norm(alt).includes(nt))) return decode(src);
+    const alt=attr(tag,"alt");
+    const candidates=[attr(tag,"data-original"),attr(tag,"data-src"),attr(tag,"data-lazy-src"),attr(tag,"src")];
+    const src=candidates.find(x=>!badImage(x)) || "";
+    if(src && alt && (norm(alt)===nt || nt.includes(norm(alt)) || norm(alt).includes(nt))) return src;
+  }
+  for(const tag of tags){
+    const candidates=[attr(tag,"data-original"),attr(tag,"data-src"),attr(tag,"data-lazy-src"),attr(tag,"src")];
+    const src=candidates.find(x=>!badImage(x)) || "";
+    if(src && /monkeyd|monkeydarchive|cdn\./i.test(src)) return src;
   }
   return "";
 }
@@ -118,15 +140,14 @@ page.setDefaultTimeout(12000);
 async function expandCurrentPage(){
   let same=0, lastCount=0, lastHeight=0;
   for(let i=0;i<120;i++){
-    // Click common "load more" controls when present.
     for(const text of ["Xem thêm","Tải thêm","Load more","Xem nhiều hơn"]){
       const loc=page.getByText(text,{exact:false});
       if(await loc.count()){
-        try{ await loc.last().click({timeout:800}); await page.waitForTimeout(450); }catch(e){}
+        try{ await loc.last().click({timeout:800}); await page.waitForTimeout(350); }catch(e){}
       }
     }
     await page.evaluate(()=>window.scrollTo(0,document.body.scrollHeight));
-    await page.waitForTimeout(500);
+    await page.waitForTimeout(350);
     const count=await page.evaluate(()=>document.querySelectorAll('a[href]').length);
     const height=await page.evaluate(()=>document.body.scrollHeight);
     if(count===lastCount && height===lastHeight) same++; else same=0;
@@ -135,30 +156,49 @@ async function expandCurrentPage(){
   }
 }
 
-async function extractBasic(){
+async function extractCurrentPage(){
   return await page.evaluate(({teamPath})=>{
     const abs=h=>{try{return new URL(h,location.href).href}catch(e){return ""}};
     const excluded=new Set(["truyen-moi.html","truyen-hoan-thanh.html","danh-sach-nhom-dich.html","index.html"]);
-    const stories=[];
-    for(const a of document.querySelectorAll("a[href]")){
-      const href=abs(a.getAttribute("href"));
-      if(!href) continue;
-      let u; try{u=new URL(href)}catch(e){continue}
-      if(!/^(www\.)?monkeydd\.com$/i.test(u.hostname)) continue;
-      const parts=u.pathname.split("/").filter(Boolean);
-      if(parts.length!==1 || !parts[0].endsWith(".html") || excluded.has(parts[0])) continue;
-
+    const validStoryUrl=href=>{
+      try{
+        const u=new URL(href);
+        if(!/^(www\.)?monkeydd\.com$/i.test(u.hostname)) return false;
+        const p=u.pathname.split("/").filter(Boolean);
+        return p.length===1 && p[0].endsWith(".html") && !excluded.has(p[0]);
+      }catch(e){return false}
+    };
+    const boxFor=a=>{
       let box=a;
-      for(let i=0;i<5 && box.parentElement;i++){
-        if(box.querySelector?.("img") && (box.innerText||"").trim().length>10) break;
+      for(let i=0;i<6 && box.parentElement;i++){
+        const txt=(box.innerText||"").trim();
+        if(box.querySelector?.("img") && txt.length>=5 && txt.length<700) break;
         box=box.parentElement;
       }
+      return box;
+    };
+    const basicFor=a=>{
+      const href=abs(a.getAttribute("href"));
+      if(!validStoryUrl(href)) return null;
+      const box=boxFor(a);
       const img=box.querySelector?.("img") || a.querySelector?.("img");
       const heading=box.querySelector?.("h1,h2,h3,h4,h5,h6");
       const title=(heading?.innerText || img?.alt || a.innerText || "").trim().replace(/\s+/g," ");
-      const cover=(img?.currentSrc || img?.src || img?.dataset?.src || img?.dataset?.original || "").trim();
+      const cover=(
+        img?.dataset?.original ||
+        img?.dataset?.src ||
+        img?.getAttribute?.("data-lazy-src") ||
+        img?.currentSrc ||
+        img?.src ||
+        ""
+      ).trim();
       const cardText=(box.innerText||"").trim().replace(/\s+/g," ");
-      stories.push({url:href,title,cover,cardText});
+      return {url:href,title,cover,cardText};
+    };
+
+    const stories=[];
+    for(const a of document.querySelectorAll("a[href]")){
+      const b=basicFor(a); if(b) stories.push(b);
     }
 
     const pages=[];
@@ -174,33 +214,81 @@ async function extractBasic(){
         }
       }catch(e){}
     }
-    return {stories,pages};
+
+    const headings=[...document.querySelectorAll("h1,h2,h3,h4,h5,h6")];
+    const between=(startText,stopText)=>{
+      const start=headings.find(h=>(h.innerText||"").toLowerCase().includes(startText.toLowerCase()));
+      if(!start) return [];
+      const stop=headings.find(h=>{
+        if(h===start) return false;
+        const follows=!!(start.compareDocumentPosition(h)&Node.DOCUMENT_POSITION_FOLLOWING);
+        return follows && (h.innerText||"").toLowerCase().includes(stopText.toLowerCase());
+      });
+      const out=[], seen=new Set();
+      for(const a of document.querySelectorAll("a[href]")){
+        const follows=!!(start.compareDocumentPosition(a)&Node.DOCUMENT_POSITION_FOLLOWING);
+        const beforeStop=!stop || !!(a.compareDocumentPosition(stop)&Node.DOCUMENT_POSITION_FOLLOWING);
+        if(!follows || !beforeStop) continue;
+        const b=basicFor(a);
+        if(!b || seen.has(b.url)) continue;
+        seen.add(b.url);
+        const m=b.cardText.match(/(?:^|\s)([\d][\d.,]{0,15})(?:\s|$)/);
+        b.firstNumber=m ? Number(m[1].replace(/[^\d]/g,"")) : 0;
+        out.push(b);
+      }
+      return out;
+    };
+
+    const monthly=between("Truyện có nhiều lượt xem trong tháng","Danh sách truyện");
+    const newest=between("Danh sách truyện","Donate").slice(0,16);
+
+    return {stories,pages,monthly,newest};
   },{teamPath:TEAM_PATH});
 }
 
 const queue=[TEAM_URL], seenPages=new Set(), basicMap=new Map();
-while(queue.length && seenPages.size<300){
+const monthlyMap=new Map(), newestMap=new Map();
+
+while(queue.length && seenPages.size<400){
   const url=queue.shift();
   if(seenPages.has(url)) continue;
   seenPages.add(url);
   console.log(`[LIST ${seenPages.size}] ${url}`);
   try{
     await page.goto(url,{waitUntil:"domcontentloaded",timeout:45000});
-    await page.waitForTimeout(900);
+    await page.waitForTimeout(700);
     await expandCurrentPage();
-    const {stories,pages}=await extractBasic();
-    for(const s of stories){
+    const data=await extractCurrentPage();
+
+    for(const s of data.stories){
       const slug=slugFrom(s.url);
       if(!slug) continue;
       const old=basicMap.get(slug);
       if(!old || (s.title||"").length>(old.title||"").length) basicMap.set(slug,{...s,slug});
     }
-    for(const p of pages) if(!seenPages.has(p) && !queue.includes(p)) queue.push(p);
+
+    // Chỉ dùng trang đầu của team để xác định "mới nhất" và bảng lượt xem tháng.
+    const u=new URL(url);
+    if(u.pathname.replace(/\/$/,"")===TEAM_PATH && !u.searchParams.get("page")){
+      data.monthly.forEach((s,i)=>{
+        const slug=slugFrom(s.url);
+        if(slug) monthlyMap.set(slug,{rank:i+1,views:s.firstNumber||0});
+      });
+      data.newest.forEach((s,i)=>{
+        const slug=slugFrom(s.url);
+        if(slug) newestMap.set(slug,{rank:i+1});
+      });
+    }
+
+    for(const p of data.pages){
+      if(!seenPages.has(p) && !queue.includes(p)) queue.push(p);
+    }
   }catch(e){
     console.warn("List page failed:",url,e.message);
   }
 }
 console.log(`Tìm thấy ${basicMap.size} truyện từ trang team.`);
+console.log(`Top tháng: ${monthlyMap.size}; mới nhất: ${newestMap.size}`);
 
 if(basicMap.size < 2){
   throw new Error("Không lấy được danh sách truyện từ MonkeyD. Dừng để tránh ghi đè dữ liệu cũ.");
@@ -219,21 +307,33 @@ async function detailOne(basic,index){
     const title=titleFrom(html) || basic.title || old.title || basic.slug.replace(/-/g," ");
     const text=strip(html);
     const lines=text.split(/\n+/).map(x=>x.trim()).filter(Boolean);
+    const monthly=monthlyMap.get(basic.slug)||{};
+    const newest=newestMap.get(basic.slug)||{};
+    const remoteCover=imageFrom(html,title) || basic.cover || old.remoteCover || "";
+
     results[index]={
       slug:basic.slug,
       title,
       monkeyd:basic.url,
       audio:audioMap[basic.slug] || old.audio || "",
       shopee:old.shopee || cfg.defaultShopee || "",
-      cover:imageFrom(html,title) || basic.cover || old.cover || "",
+      cover:old.cover || "",
+      remoteCover,
       status:next(lines,"Trạng thái") || old.status || "",
       chapterCount:chaptersFrom(html) || old.chapterCount || "",
       genres:genresFrom(text,title),
       team:next(lines,"Team") || old.team || "Chuồng nhỏ của Hoài",
-      type:next(lines,"Loại") || old.type || "Truyện Chữ"
+      type:next(lines,"Loại") || old.type || "Truyện Chữ",
+      views:parseNumber(next(lines,"Lượt xem")) || old.views || 0,
+      updatedText:next(lines,"Cập nhật") || old.updatedText || "",
+      monthlyViews:monthly.views || 0,
+      monthlyRank:monthly.rank || 0,
+      newestRank:newest.rank || 0
     };
   }catch(e){
     console.warn("Detail failed:",basic.url,e.message);
+    const monthly=monthlyMap.get(basic.slug)||{};
+    const newest=newestMap.get(basic.slug)||{};
     results[index]={
       ...old,
       slug:basic.slug,
@@ -241,24 +341,78 @@ async function detailOne(basic,index){
       monkeyd:basic.url,
       audio:audioMap[basic.slug] || old.audio || "",
       shopee:old.shopee || cfg.defaultShopee || "",
-      cover:basic.cover || old.cover || ""
+      remoteCover:basic.cover || old.remoteCover || "",
+      monthlyViews:monthly.views || old.monthlyViews || 0,
+      monthlyRank:monthly.rank || old.monthlyRank || 0,
+      newestRank:newest.rank || old.newestRank || 0
     };
   }
   done++;
-  if(done%50===0) console.log(`Đã đọc chi tiết ${done}/${basics.length}`);
+  if(done%100===0) console.log(`Đã đọc chi tiết ${done}/${basics.length}`);
 }
 
-// concurrency 10 to avoid flooding MonkeyD too aggressively
 let cursor=0;
-async function worker(){
+async function detailWorker(){
   while(true){
     const i=cursor++;
     if(i>=basics.length) return;
     await detailOne(basics[i],i);
-    await new Promise(r=>setTimeout(r,80));
+    await new Promise(r=>setTimeout(r,50));
   }
 }
-await Promise.all(Array.from({length:10},()=>worker()));
+await Promise.all(Array.from({length:12},()=>detailWorker()));
+
+async function localCoverFor(s){
+  // Giữ ảnh local cũ nếu file vẫn tồn tại.
+  if(s.cover && !/^https?:/i.test(s.cover)){
+    try{
+      await fs.access(path.join(ROOT,s.cover));
+      return s.cover;
+    }catch(e){}
+  }
+  const url=s.remoteCover;
+  if(badImage(url)) return url || "";
+
+  const rel=`assets/covers/${s.slug}.webp`;
+  const out=path.join(ROOT,rel);
+
+  try{
+    const r=await context.request.get(url,{
+      timeout:25000,
+      failOnStatusCode:false,
+      headers:{referer:s.monkeyd || TEAM_URL}
+    });
+    if(!r.ok()) throw new Error(`HTTP ${r.status()}`);
+    const buf=Buffer.from(await r.body());
+    if(buf.length<5000) throw new Error("ảnh quá nhỏ/placeholder");
+
+    await sharp(buf)
+      .rotate()
+      .resize({width:480,height:640,fit:"inside",withoutEnlargement:true})
+      .webp({quality:76})
+      .toFile(out);
+
+    return rel;
+  }catch(e){
+    console.warn("Cover failed:",s.slug,e.message);
+    return url || "";
+  }
+}
+
+console.log("Bắt đầu tải và tối ưu ảnh bìa...");
+let coverCursor=0, coverDone=0;
+async function coverWorker(){
+  while(true){
+    const i=coverCursor++;
+    if(i>=results.length) return;
+    const s=results[i];
+    if(!s) continue;
+    s.cover=await localCoverFor(s);
+    coverDone++;
+    if(coverDone%100===0) console.log(`Ảnh bìa ${coverDone}/${results.length}`);
+  }
+}
+await Promise.all(Array.from({length:8},()=>coverWorker()));
 await browser.close();
 
 const stories=results.filter(Boolean);
@@ -277,6 +431,7 @@ function renderPage(s){
   for(const g of (s.genres||[]).slice(0,6))pills.push(`<span class="pill">🏷 ${esc(g)}</span>`);
   if(s.audio)pills.push(`<span class="pill">🎧 Có Audio</span>`);
   let info=`Team: ${esc(s.team||"")}<br>Trạng thái: ${esc(s.status||"")}<br>Loại: ${esc(s.type||"")}`;
+  if(s.views) info+=`<br>Lượt xem: ${Number(s.views).toLocaleString("vi-VN")}`;
   if(s.genres?.length)info+=`<br>Thể loại: ${s.genres.map(esc).join(" • ")}`;
   const ab=s.audio?`<a class="btn audio" href="${esc(s.audio)}" target="_blank" rel="noopener">🎧 NGHE AUDIO</a>`:"";
   const sa=s.audio?`<a href="${esc(s.audio)}" target="_blank" rel="noopener">🎧<br>Audio</a>`:"<span></span>";
@@ -284,7 +439,7 @@ function renderPage(s){
   const rep={
     "__TITLE__":esc(s.title),
     "__TEAM_URL__":cfg.teamUrl,
-    "__COVER__":s.cover||"",
+    "__COVER_SRC__": /^https?:\/\//i.test(s.cover||"") ? (s.cover||"") : `../../${s.cover||""}`,
     "__PILLS__":pills.join(""),
     "__AUDIO_BUTTON__":ab,
     "__SHOPEE__":s.shopee||cfg.defaultShopee||"",
@@ -306,7 +461,7 @@ for(let i=0;i<stories.length;i++){
   const dir=path.join(ROOT,"truyen",s.slug);
   await fs.mkdir(dir,{recursive:true});
   await fs.writeFile(path.join(dir,"index.html"),renderPage(s));
-  if((i+1)%200===0) console.log(`Đã tạo trang ${i+1}/${stories.length}`);
+  if((i+1)%250===0) console.log(`Đã tạo trang ${i+1}/${stories.length}`);
 }
 
 await fs.writeFile(path.join(ROOT,"data","stories.json"),JSON.stringify(stories,null,2));
@@ -314,7 +469,9 @@ await fs.writeFile(path.join(ROOT,"data","sync-info.json"),JSON.stringify({
   lastSync:new Date().toISOString(),
   totalStories:stories.length,
   source:TEAM_URL,
-  listPagesVisited:seenPages.size
+  listPagesVisited:seenPages.size,
+  monthlyHotCount:[...monthlyMap.keys()].length,
+  newestCount:[...newestMap.keys()].length
 },null,2));
 
 console.log(`HOÀN TẤT: ${stories.length} truyện.`);

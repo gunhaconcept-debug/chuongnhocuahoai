@@ -1,38 +1,24 @@
-# Chuồng nhỏ của Hoài — GitHub Pages V6
+# Chuồng nhỏ của Hoài — GitHub Pages V6.1
 
-## V6 khác V5
-Trang chủ không còn chỉ có truyện nhập tay. Workflow **Sync all MonkeyD stories** sẽ:
-1. Mở `https://monkeydd.com/nhom-dich/2837`.
-2. Cuộn / bấm "Xem thêm" và theo các trang phân trang được phát hiện.
-3. Thu thập toàn bộ link truyện của team.
-4. Đọc chi tiết từng truyện: tên, bìa, trạng thái, số chương, thể loại.
-5. Tạo trang `/truyen/<slug>/` cho từng truyện.
-6. Cập nhật `data/stories.json`.
-7. Tự deploy GitHub Pages.
+## Trang chủ
+V6.1 có 3 khu:
+1. **Truyện mới nhất** — lấy thứ tự mới nhất từ phần "Danh sách truyện" của trang team MonkeyD.
+2. **Truyện có nhiều lượt xem trong tháng** — lấy đúng section tương ứng trên MonkeyD.
+3. **Danh sách truyện** — tìm kiếm, lọc thể loại, FULL, Có Audio, phân trang.
 
-## Chạy đồng bộ
+## Ảnh bìa
+Workflow ưu tiên URL ảnh thật (`data-original` / `data-src`) thay vì spinner lazy-load.
+Ảnh được tải về, thu nhỏ và chuyển WebP rồi lưu tại `assets/covers/` để GitHub Pages hiển thị ổn định hơn.
+Ảnh đã có sẽ được giữ lại, không tải lại mỗi lần.
+
+## Chạy
 GitHub → Actions → **Sync all MonkeyD stories** → Run workflow.
 
-Lần đầu có thể mất vài phút vì phải đọc toàn bộ kho truyện.
-Sau đó workflow được lên lịch chạy hằng ngày.
+Lần chạy V6.1 đầu tiên sẽ lâu hơn V6 vì phải tải/đổi định dạng ảnh bìa.
+Các lần sau nhanh hơn vì ảnh đã tồn tại.
 
-## Audio riêng của bạn
-`data/audio-map.json` chứa:
-`slug-truyen: link YouTube/audio`
-
-Khi sync lại, audio trong file này được giữ và gắn vào đúng truyện.
+## Audio
+Giữ map audio tại `data/audio-map.json`.
 
 ## Shopee
-Link mặc định:
-`https://s.shopee.vn/5ArjEaR2ZS`
-
-Đổi tại `data/config.json`.
-
-## Nếu không thấy workflow Sync
-Do Windows/GitHub upload có thể bỏ qua folder `.github`.
-Tạo file trên GitHub:
-`.github/workflows/sync-team.yml`
-
-Sau đó copy toàn bộ nội dung file:
-`SYNC-TEAM-WORKFLOW.yml`
-vào file đó và Commit.
+Link mặc định trong `data/config.json`.
