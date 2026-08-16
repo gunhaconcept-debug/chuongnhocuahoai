@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>__TITLE__ - Chuồng nhỏ của Hoài</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="shell">
+  <div class="header">
+    <a class="logo" href="../../">📚 Chuồng nhỏ của Hoài</a>
+    <div class="nav"><a class="mini" href="__TEAM_URL__" target="_blank" rel="noopener">🏠 Tất cả truyện</a></div>
+  </div>
+  <div class="card">
+    <div class="cover"><img src="../../__COVER__" alt="__TITLE__"></div>
+    <h1 class="story-title">__TITLE__</h1>
+    <div class="meta">__PILLS__</div>
+    <button class="btn read" onclick="openReadGate()">📖 ĐỌC TRUYỆN</button>
+    __AUDIO_BUTTON__
+    <a class="btn secondary" href="__TEAM_URL__" target="_blank" rel="noopener">🏠 XEM TẤT CẢ TRUYỆN CỦA TÔI</a>
+
+    <div class="section">🛒 Ủng hộ nhà dịch</div>
+    <a class="btn shop" href="__SHOPEE__" target="_blank" rel="sponsored noopener">MỞ SHOPEE ỦNG HỘ ❤️</a>
+    <div class="note">Liên kết tiếp thị liên kết. Nếu bạn mua hàng đủ điều kiện qua link này, mình có thể nhận hoa hồng. Shopee mở ở tab mới.</div>
+
+    <div class="section">📌 Thông tin</div>
+    <div class="info">__INFO__</div>
+  </div>
+</div>
+
+<div class="sticky">
+  <a href="#" onclick="openReadGate();return false;">📖<br>Đọc</a>
+  __STICKY_AUDIO__
+  <a href="__SHOPEE__" target="_blank" rel="sponsored noopener">🛒<br>Shopee</a>
+  <a href="__TEAM_URL__" target="_blank" rel="noopener">🏠<br>Truyện của tôi</a>
+</div>
+
+<div id="gate" class="backdrop">
+  <div class="modal">
+    <h2>❤️ Ủng hộ nhà dịch</h2>
+    <p>Nếu tiện, bạn có thể mở Shopee qua link của mình trước khi đọc. Shopee mở ở tab mới và trang này vẫn giữ nguyên.</p>
+    <a id="gateShop" class="btn shop" href="__SHOPEE__" target="_blank" rel="sponsored noopener" onclick="markSupport()">🛒 MỞ SHOPEE ỦNG HỘ</a>
+    <div id="thanks" class="thanks">✅ Cảm ơn bạn đã ủng hộ ❤️</div>
+    <a class="btn secondary" href="__MONKEYD__" target="_blank" rel="noopener" onclick="rememberGate()">📖 TIẾP TỤC ĐỌC TRUYỆN</a>
+    __GATE_AUDIO__
+    <button class="btn secondary" onclick="closeGate()">Đóng</button>
+    <div class="note">Popup tối đa 1 lần trong 24 giờ trên thiết bị này.</div>
+  </div>
+</div>
+<script>
+window.STORY=__STORY_JSON__;
+window.SITE_CONFIG=__CONFIG_JSON__;
+</script>
+<script src="../../assets/story.js"></script>
+</body>
+</html>
