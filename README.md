@@ -1,42 +1,38 @@
-# Chuồng nhỏ của Hoài — GitHub Pages V5
+# Chuồng nhỏ của Hoài — GitHub Pages V6
 
-Bản này dùng **GitHub + GitHub Pages + GitHub Actions**, không cần Netlify.
+## V6 khác V5
+Trang chủ không còn chỉ có truyện nhập tay. Workflow **Sync all MonkeyD stories** sẽ:
+1. Mở `https://monkeydd.com/nhom-dich/2837`.
+2. Cuộn / bấm "Xem thêm" và theo các trang phân trang được phát hiện.
+3. Thu thập toàn bộ link truyện của team.
+4. Đọc chi tiết từng truyện: tên, bìa, trạng thái, số chương, thể loại.
+5. Tạo trang `/truyen/<slug>/` cho từng truyện.
+6. Cập nhật `data/stories.json`.
+7. Tự deploy GitHub Pages.
 
-## Bật website
-1. GitHub repo → **Settings** → **Pages**.
-2. Build and deployment → **Source: GitHub Actions**.
-3. Vào **Actions** → `Deploy GitHub Pages` → Run workflow (hoặc commit bất kỳ thay đổi nào).
+## Chạy đồng bộ
+GitHub → Actions → **Sync all MonkeyD stories** → Run workflow.
 
-Với repo `gunhaconcept-debug/chuongnhocuahoai`, link dự kiến:
-`https://gunhaconcept-debug.github.io/chuongnhocuahoai/`
+Lần đầu có thể mất vài phút vì phải đọc toàn bộ kho truyện.
+Sau đó workflow được lên lịch chạy hằng ngày.
 
-## Thêm truyện mới — chỉ cần 3 link
-1. Vào tab **Actions**.
-2. Chọn **Add or update story**.
-3. Bấm **Run workflow**.
-4. Dán:
-   - MonkeyD URL (bắt buộc)
-   - Audio / YouTube (có thể trống)
-   - Shopee Affiliate (có thể trống; trống sẽ dùng link mặc định)
-5. Bấm **Run workflow**.
+## Audio riêng của bạn
+`data/audio-map.json` chứa:
+`slug-truyen: link YouTube/audio`
 
-Workflow sẽ:
-- đọc tên truyện từ MonkeyD;
-- lấy ảnh bìa;
-- lấy trạng thái;
-- lấy số chương;
-- lấy thể loại;
-- tạo URL riêng dưới `/truyen/<slug>/`;
-- cập nhật trang chủ;
-- tự deploy GitHub Pages.
+Khi sync lại, audio trong file này được giữ và gắn vào đúng truyện.
 
-## Cập nhật tự động
-Workflow `Refresh MonkeyD data` chạy mỗi ngày và có nút chạy thủ công.
-Nó cập nhật trạng thái/số chương/thể loại/ảnh của các truyện đã có.
+## Shopee
+Link mặc định:
+`https://s.shopee.vn/5ArjEaR2ZS`
 
-## Shopee mặc định
-Sửa `data/config.json` nếu muốn đổi link Affiliate toàn site.
+Đổi tại `data/config.json`.
 
-## Lưu ý GitHub Pages
-Nếu tài khoản GitHub Free và repo đang **Private**, GitHub Pages có thể yêu cầu repo Public.
-Repo private dùng Pages tùy gói GitHub.
+## Nếu không thấy workflow Sync
+Do Windows/GitHub upload có thể bỏ qua folder `.github`.
+Tạo file trên GitHub:
+`.github/workflows/sync-team.yml`
+
+Sau đó copy toàn bộ nội dung file:
+`SYNC-TEAM-WORKFLOW.yml`
+vào file đó và Commit.

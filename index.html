@@ -13,9 +13,10 @@
       <a class="mini" href="https://monkeydd.com/nhom-dich/2837" target="_blank" rel="noopener">🏠 MonkeyD</a>
     </div>
   </div>
+
   <div class="hero">
     <h1>Truyện • Audio • Góc ủng hộ ❤️</h1>
-    <p>Tìm truyện của Chuồng nhỏ của Hoài, đọc trên MonkeyD hoặc nghe audio.</p>
+    <p>Toàn bộ truyện của Chuồng nhỏ của Hoài được đồng bộ từ MonkeyD.</p>
     <input id="search" class="search" placeholder="🔎 Tìm tên truyện hoặc thể loại...">
     <div class="filters">
       <button class="filter active" data-mode="all">Tất cả</button>
@@ -23,7 +24,14 @@
       <button class="filter" data-mode="audio">🎧 Có Audio</button>
     </div>
   </div>
+
+  <div class="statsline">
+    <span id="count">Đang tải...</span>
+    <span id="syncText">Nguồn: MonkeyD</span>
+  </div>
+
   <div id="list" class="grid"></div>
+  <div id="pager" class="pager"></div>
 </div>
 <script src="assets/home.js"></script>
 </body>
