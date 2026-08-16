@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tạo link truyện - Chuồng nhỏ của Hoài</title>
+<link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/config.js"></script>
+</head>
+<body>
+<div class="shell">
+  <div class="header">
+    <a class="logo" href="/">📚 Chuồng nhỏ của Hoài</a>
+    <div class="header-actions"><a class="mini" href="/" >← Trang chủ</a></div>
+  </div>
+
+  <div class="form-card">
+    <h1>＋ Tạo link truyện</h1>
+    <p>Dán link MonkeyD, Audio và Shopee. Trang sẽ tự đọc thông tin MonkeyD khi người đọc mở link.</p>
+
+    <label>Link MonkeyD *</label>
+    <input id="monkey" placeholder="https://monkeydd.com/ten-truyen.html">
+
+    <label>Link Audio / YouTube</label>
+    <input id="audio" placeholder="https://www.youtube.com/watch?v=...">
+
+    <label>Link Shopee Affiliate</label>
+    <input id="shop" value="https://s.shopee.vn/5ArjEaR2ZS">
+
+    <button class="btn btn-green" onclick="makeLink()">TẠO LINK TRUYỆN</button>
+
+    <div id="preview" class="preview"></div>
+
+    <div id="output" class="output">
+      <label>Link để gửi cho mọi người</label>
+      <input id="result" readonly>
+      <button class="btn btn-read" onclick="copyLink()">📋 SAO CHÉP LINK</button>
+      <a id="openLink" class="btn btn-secondary" href="#" target="_blank">👀 MỞ THỬ LINK</a>
+    </div>
+  </div>
+
+  <div class="section-title">Cách dùng</div>
+  <div class="info">
+    1. Dán 3 link.<br>
+    2. Bấm <b>TẠO LINK TRUYỆN</b>.<br>
+    3. Sao chép link vừa tạo và đăng Facebook/Messenger.<br>
+    4. Bạn không cần sửa file HTML cho từng truyện.
+  </div>
+</div>
+
+<script>
+function ytId(url){
+  if(!url) return "";
+  try{
+    const u=new URL(url);
+    if(u.hostname.includes("youtu.be")) return u.pathname.replace("/","");
+    if(u.hostname.includes("youtube.com")) return u.searchParams.get("v") || "";
+  }catch(e){}
+  return "";
+}
+function slugFromMonkey(url){
+  try{
+    const u=new URL(url);
+    return u.pathname.split("/").filter(Boolean).pop().replace(/\.html$/i,"");
+  }catch(e){ return ""; }
+}
+async function makeLink(){
+  const monkey=document.getElementById("monkey").value.trim();
+  const audio=document.getElementById("audio").value.trim();
+  const shop=document.getElementById("shop").value.trim();
+  const slug=slugFromMonkey(monkey);
+  if(!slug){ alert("Link MonkeyD chưa đúng."); return; }
+
+  const id=ytId(audio);
+  let path="/truyen/"+encodeURIComponent(slug)+"/";
+  const params=new URLSearchParams();
+  if(id) path+=encodeURIComponent(id)+"/";
+  else if(audio) params.set("audio",audio);
+
+  if(shop && shop !== (window.CHUONG_CONFIG.defaultShopee||"")) params.set("shop",shop);
+
+  const link=location.origin+path+(params.toString() ? "?"+params.toString() : "");
+  document.getElementById("result").value=link;
+  document.getElementById("openLink").href=link;
+  document.getElementById("output").style.display="block";
+
+  const pv=document.getElementById("preview");
+  pv.style.display="block";
+  pv.innerHTML="⏳ Đang đọc thông tin MonkeyD...";
+  try{
+    const r=await fetch("/api/monkeyd-meta?url="+encodeURIComponent(monkey));
+    if(r.ok){
+      const d=await r.json();
+      pv.innerHTML="<b>"+(d.title||"Đã lấy được truyện")+"</b><br>"+
+        (d.status ? "Trạng thái: "+d.status+"<br>" : "")+
+        (d.chapterCount ? "Số chương: "+d.chapterCount+"<br>" : "")+
+        (d.genres?.length ? "Thể loại: "+d.genres.join(" • ") : "");
+    }else pv.innerHTML="✅ Link đã tạo. Thông tin MonkeyD sẽ được đọc khi mở trang.";
+  }catch(e){
+    pv.innerHTML="✅ Link đã tạo. Thông tin MonkeyD sẽ được đọc khi mở trang.";
+  }
+}
+async function copyLink(){
+  const v=document.getElementById("result").value;
+  try{ await navigator.clipboard.writeText(v); alert("Đã sao chép link."); }
+  catch(e){ document.getElementById("result").select(); document.execCommand("copy"); alert("Đã sao chép link."); }
+}
+</script>
+</body>
+</html>
