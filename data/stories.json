@@ -1,11 +1,267 @@
 [
   {
+    "slug": "truyen-sang-tac",
+    "title": "MonkeyD - Thế giới truyện chữ, truyện Zhihu hay nhất, Đọc Truyện Online, Truyện Full",
+    "monkeyd": "https://monkeydd.com/truyen-sang-tac.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://monkeydd.com/images/logo/Logo-MonkeyD.png"
+  },
+  {
+    "slug": "bi-mat",
+    "title": "BÍ MẬT",
+    "monkeyd": "https://monkeydd.com/bi-mat.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2024/08/15/1723739520-bi-mat.jpg"
+  },
+  {
+    "slug": "nhan-nham-chim-hoang-yen",
+    "title": "NHẬN NHẦM CHIM HOÀNG YẾN",
+    "monkeyd": "https://monkeydd.com/nhan-nham-chim-hoang-yen.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2024/07/02/1719856671-nhan-nham-chim-hoang-yen.jpg"
+  },
+  {
+    "slug": "sau-khi-mat-tri-nho-toi-va-ke-thu-sinh-duoc-bay-dua-con",
+    "title": "SAU KHI MẤT TRÍ NHỚ, TÔI VÀ KẺ THÙ SINH ĐƯỢC BẢY ĐỨA CON!",
+    "monkeyd": "https://monkeydd.com/sau-khi-mat-tri-nho-toi-va-ke-thu-sinh-duoc-bay-dua-con.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2024/06/03/1717355315-sau-khi-mat-tri-nho-toi-va-ke-thu-sinh-duoc-bay-dua-con.jpg"
+  },
+  {
+    "slug": "quy-nhan-kinh-thanh",
+    "title": "QUÝ NHÂN KINH THÀNH",
+    "monkeyd": "https://monkeydd.com/quy-nhan-kinh-thanh.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2024/07/09/1720542765-quy-nhan-kinh-thanh.jpg"
+  },
+  {
+    "slug": "bay-ve-phia-nui-cua-co-ay",
+    "title": "BAY VỀ PHÍA NÚI CỦA CÔ ẤY",
+    "monkeyd": "https://monkeydd.com/bay-ve-phia-nui-cua-co-ay.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2024/08/20/1724088078-bay-ve-phia-nui-cua-co-ay.jpg"
+  },
+  {
+    "slug": "ba-nam-sau-khi-chia-tay-toi-bi-vut-bo-o-noi-hoang-da",
+    "title": "BA NĂM SAU KHI CHIA TAY, TÔI BỊ VỨT BỎ Ở NƠI HOANG DÃ",
+    "monkeyd": "https://monkeydd.com/ba-nam-sau-khi-chia-tay-toi-bi-vut-bo-o-noi-hoang-da.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2024/05/04/1714819332-ba-nam-sau-khi-chia-tay-toi-bi-vut-bo-o-noi-hoang-da.jpg"
+  },
+  {
+    "slug": "mat-tri-nho",
+    "title": "MẤT TRÍ NHỚ",
+    "monkeyd": "https://monkeydd.com/mat-tri-nho.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://monkeydd.com/img/ajax-loading.gif"
+  },
+  {
+    "slug": "trung-phung",
+    "title": "TRÙNG PHÙNG",
+    "monkeyd": "https://monkeydd.com/trung-phung.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://monkeydd.com/img/ajax-loading.gif"
+  },
+  {
+    "slug": "sinh-ra-de-toa-sang",
+    "title": "SINH RA ĐỂ TỎA SÁNG",
+    "monkeyd": "https://monkeydd.com/sinh-ra-de-toa-sang.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://monkeydd.com/img/ajax-loading.gif"
+  },
+  {
+    "slug": "chuc-mung-tan-lang",
+    "title": "CHÚC MỪNG TÂN LANG",
+    "monkeyd": "https://monkeydd.com/chuc-mung-tan-lang.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://monkeydd.com/img/ajax-loading.gif"
+  },
+  {
+    "slug": "bo-chong-duoi-toi-de-nhuong-cho-cho-con-gai-toi-mang-di-toan-bo-so-do",
+    "title": "BỐ CHỒNG ĐUỔI TÔI ĐỂ NHƯỜNG CHỖ CHO CON GÁI, TÔI MANG ĐI TOÀN BỘ SỔ ĐỎ",
+    "monkeyd": "https://monkeydd.com/bo-chong-duoi-toi-de-nhuong-cho-cho-con-gai-toi-mang-di-toan-bo-so-do.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/05/1785945886-bo-chong-duoi-toi-de-nhuong-cho-cho-con-gai-toi-mang-di-toan-bo-so-do.jpg"
+  },
+  {
+    "slug": "chi-dau-khoe-luong-cao-toi-thua-ke-ba-tram-trieu",
+    "title": "CHỊ DÂU KHOE LƯƠNG CAO, TÔI THỪA KẾ BA TRĂM TRIỆU",
+    "monkeyd": "https://monkeydd.com/chi-dau-khoe-luong-cao-toi-thua-ke-ba-tram-trieu.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/07/30/1785428648-chi-dau-khoe-luong-cao-toi-thua-ke-ba-tram-trieu.jpg"
+  },
+  {
+    "slug": "chong-quy-xin-toi-nhuong-can-nha-cho-anh-toi-lap-tuc-doi-lai-tien-tra-truoc",
+    "title": "CHỒNG QUỲ XIN TÔI NHƯỜNG CĂN NHÀ CHO ANH, TÔI LẬP TỨC ĐÒI LẠI TIỀN TRẢ TRƯỚC",
+    "monkeyd": "https://monkeydd.com/chong-quy-xin-toi-nhuong-can-nha-cho-anh-toi-lap-tuc-doi-lai-tien-tra-truoc.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/05/1785936777-chong-quy-xin-toi-nhuong-can-nha-cho-anh-toi-lap-tuc-doi-lai-tien-tra-truoc.jpg"
+  },
+  {
+    "slug": "em-chong-don-vao-nha-duong-thai-toi-lap-tuc-sang-singapore-hai-nam",
+    "title": "EM CHỒNG DỌN VÀO NHÀ DƯỠNG THAI, TÔI LẬP TỨC SANG SINGAPORE HAI NĂM",
+    "monkeyd": "https://monkeydd.com/em-chong-don-vao-nha-duong-thai-toi-lap-tuc-sang-singapore-hai-nam.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/05/1785946575-em-chong-don-vao-nha-duong-thai-toi-lap-tuc-sang-singapore-hai-nam.jpg"
+  },
+  {
+    "slug": "chuc-phu",
+    "title": "CHÚC PHÙ",
+    "monkeyd": "https://monkeydd.com/chuc-phu.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/08/1786205842-chuc-phu.jpg"
+  },
+  {
+    "slug": "ep-vo-nhuong-nhin-nguoi-nha-cuoi-cung-toi-bi-chinh-ho-ruong-bo",
+    "title": "ÉP VỢ NHƯỜNG NHỊN NGƯỜI NHÀ, CUỐI CÙNG TÔI BỊ CHÍNH HỌ RUỒNG BỎ",
+    "monkeyd": "https://monkeydd.com/ep-vo-nhuong-nhin-nguoi-nha-cuoi-cung-toi-bi-chinh-ho-ruong-bo.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/06/1786033362-sau-ly-hon-khuong-vien-moi-hieu-ai-moi-that-su-la-nguoi-nha.jpg"
+  },
+  {
+    "slug": "bo-bao-toi-de-phong-chong-toi-lap-tuc-khoa-650-nghin-te-tien-tiet-kiem",
+    "title": "BỐ BẢO TÔI ĐỀ PHÒNG CHỒNG, TÔI LẬP TỨC KHÓA 650 NGHÌN TỆ TIỀN TIẾT KIỆM",
+    "monkeyd": "https://monkeydd.com/bo-bao-toi-de-phong-chong-toi-lap-tuc-khoa-650-nghin-te-tien-tiet-kiem.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://monkeydd.com/img/ajax-loading.gif"
+  },
+  {
+    "slug": "em-chong-tu-y-lai-xe-cua-toi-di-du-lich-toi-khoa-the-ca-nha",
+    "title": "EM CHỒNG TỰ Ý LÁI XE CỦA TÔI ĐI DU LỊCH, TÔI KHÓA THẺ CẢ NHÀ",
+    "monkeyd": "https://monkeydd.com/em-chong-tu-y-lai-xe-cua-toi-di-du-lich-toi-khoa-the-ca-nha.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://monkeydd.com/img/ajax-loading.gif"
+  },
+  {
+    "slug": "dich-tu-bi-ha-doc-ta-lat-do-ca-hau-phu",
+    "title": "ĐÍCH TỬ BỊ HẠ ĐỘC, TA LẬT ĐỔ CẢ HẦU PHỦ",
+    "monkeyd": "https://monkeydd.com/dich-tu-bi-ha-doc-ta-lat-do-ca-hau-phu.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://monkeydd.com/img/ajax-loading.gif"
+  },
+  {
+    "slug": "toi-vua-het-o-cu-me-chong-da-giuc-toi-den-cham-co-em-chong-dang-o-cu",
+    "title": "TÔI VỪA HẾT Ở CỮ, MẸ CHỒNG ĐÃ GIỤC TÔI ĐẾN CHĂM CÔ EM CHỒNG ĐANG Ở CỮ",
+    "monkeyd": "https://monkeydd.com/toi-vua-het-o-cu-me-chong-da-giuc-toi-den-cham-co-em-chong-dang-o-cu.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://monkeydd.com/img/ajax-loading.gif"
+  },
+  {
+    "slug": "dao-dang",
+    "title": "ĐÀO ĐẮNG",
+    "monkeyd": "https://monkeydd.com/dao-dang.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://monkeydd.com/img/ajax-loading.gif"
+  },
+  {
+    "slug": "me-chong-che-toi-mang-tien-ve-nha-me-de-toi-lien-don-bo-me-ve-can-ho-cao-cap",
+    "title": "MẸ CHỒNG CHÊ TÔI MANG TIỀN VỀ NHÀ MẸ ĐẺ, TÔI LIỀN ĐÓN BỐ MẸ VỀ CĂN HỘ CAO CẤP",
+    "monkeyd": "https://monkeydd.com/me-chong-che-toi-mang-tien-ve-nha-me-de-toi-lien-don-bo-me-ve-can-ho-cao-cap.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://monkeydd.com/img/ajax-loading.gif"
+  },
+  {
+    "slug": "ung-cot",
+    "title": "ƯNG CỐT",
+    "monkeyd": "https://monkeydd.com/ung-cot.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://monkeydd.com/img/ajax-loading.gif"
+  },
+  {
+    "slug": "thoat-khoi-dong-cung-ta-tro-ve-ben-chang",
+    "title": "THOÁT KHỎI ĐÔNG CUNG, TA TRỞ VỀ BÊN CHÀNG",
+    "monkeyd": "https://monkeydd.com/thoat-khoi-dong-cung-ta-tro-ve-ben-chang.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://monkeydd.com/img/ajax-loading.gif"
+  },
+  {
+    "slug": "me-chong-lay-tien-mung-tuoi-cua-con-toi-toi-lap-tuc-khoa-chat-18-nam",
+    "title": "MẸ CHỒNG LẤY TIỀN MỪNG TUỔI CỦA CON TÔI, TÔI LẬP TỨC KHÓA CHẶT 18 NĂM",
+    "monkeyd": "https://monkeydd.com/me-chong-lay-tien-mung-tuoi-cua-con-toi-toi-lap-tuc-khoa-chat-18-nam.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://monkeydd.com/img/ajax-loading.gif"
+  },
+  {
+    "slug": "may-roi-nhan-gian-muon-noi-sau-vuong",
+    "title": "MÂY RƠI NHÂN GIAN, MUÔN NỖI SẦU VƯƠNG",
+    "monkeyd": "https://monkeydd.com/may-roi-nhan-gian-muon-noi-sau-vuong.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/16/1786864281-may-roi-nhan-gian-muon-noi-sau-vuong.jpg"
+  },
+  {
+    "slug": "doi-kim-thoa",
+    "title": "ĐỔI KIM THOA",
+    "monkeyd": "https://monkeydd.com/doi-kim-thoa.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/16/1786814648-doi-kim-thoa.jpg"
+  },
+  {
+    "slug": "cong-chua-cuop-tu-cau-ta-lien-doi-menh-vao-cung",
+    "title": "CÔNG CHÚA CƯỚP TÚ CẦU, TA LIỀN ĐỔI MỆNH VÀO CUNG",
+    "monkeyd": "https://monkeydd.com/cong-chua-cuop-tu-cau-ta-lien-doi-menh-vao-cung.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/16/1786814442-cong-chua-cuop-tu-cau-ta-lien-doi-menh-vao-cung.jpg"
+  },
+  {
+    "slug": "xuyen-thanh-an-nhan-cua-nam-chinh-trong-truyen-chu-mau-trong-sinh",
+    "title": "XUYÊN THÀNH ÂN NHÂN CỦA NAM CHÍNH TRONG TRUYỆN CHỦ MẪU TRỌNG SINH",
+    "monkeyd": "https://monkeydd.com/xuyen-thanh-an-nhan-cua-nam-chinh-trong-truyen-chu-mau-trong-sinh.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/16/1786813630-xuyen-thanh-an-nhan-cua-nam-chinh-trong-truyen-chu-mau-trong-sinh.jpg"
+  },
+  {
+    "slug": "chong-dan-tinh-nhan-den-tiec-con-trai-toi-khien-anh-ta-mat-ca-cong-ty",
+    "title": "CHỒNG DẪN TÌNH NHÂN ĐẾN TIỆC CON TRAI, TÔI KHIẾN ANH TA MẤT CẢ CÔNG TY",
+    "monkeyd": "https://monkeydd.com/chong-dan-tinh-nhan-den-tiec-con-trai-toi-khien-anh-ta-mat-ca-cong-ty.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/15/1786812567-chong-dan-tinh-nhan-den-tiec-con-trai-toi-khien-anh-ta-mat-ca-cong-ty.jpg"
+  },
+  {
+    "slug": "em-vo-doi-hoi-mon-toi-lien-duoi-khoi-nha",
+    "title": "EM VỢ ĐÒI HỒI MÔN, TÔI LIỀN ĐUỔI KHỎI NHÀ",
+    "monkeyd": "https://monkeydd.com/em-vo-doi-hoi-mon-toi-lien-duoi-khoi-nha.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/15/1786811927-em-vo-doi-hoi-mon-toi-lien-duoi-khoi-nha.jpg"
+  },
+  {
     "slug": "chong-dua-dan-em-ve-nha-o-toi-am-tham-lay-giay-ly-hon-roi-roi-di",
     "title": "CHỒNG ĐƯA ĐÀN EM VỀ NHÀ Ở, TÔI ÂM THẦM LẤY GIẤY LY HÔN RỒI RỜI ĐI",
     "monkeyd": "https://monkeydd.com/chong-dua-dan-em-ve-nha-o-toi-am-tham-lay-giay-ly-hon-roi-roi-di.html",
     "audio": "https://www.youtube.com/watch?v=2wVXZs2tdRk",
     "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
-    "cover": "assets/covers/chong-dua-dan-em-ve-nha-o-toi-am-tham-lay-giay-ly-hon-roi-roi-di.png",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/15/1786811727-chong-dua-dan-em-ve-nha-o-toi-am-tham-lay-giay-ly-hon-roi-roi-di.jpg",
     "status": "Đã đủ bộ",
     "chapterCount": 6,
     "genres": [
@@ -18,5 +274,133 @@
     ],
     "team": "Chuồng nhỏ của Hoài",
     "type": "Truyện Chữ"
+  },
+  {
+    "slug": "con-thi-xong-dai-hoc-toi-lap-tuc-ly-hon-doi-lai-tat-ca",
+    "title": "CON THI XONG ĐẠI HỌC, TÔI LẬP TỨC LY HÔN ĐÒI LẠI TẤT CẢ",
+    "monkeyd": "https://monkeydd.com/con-thi-xong-dai-hoc-toi-lap-tuc-ly-hon-doi-lai-tat-ca.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/14/1786725161-con-thi-xong-dai-hoc-toi-lap-tuc-ly-hon-doi-lai-tat-ca.jpg"
+  },
+  {
+    "slug": "toi-bo-4-trieu-mua-nha-chong-lai-am-tham-de-bo-me-dung-ten",
+    "title": "TÔI BỎ 4 TRIỆU MUA NHÀ, CHỒNG LẠI ÂM THẦM ĐỂ BỐ MẸ ĐỨNG TÊN",
+    "monkeyd": "https://monkeydd.com/toi-bo-4-trieu-mua-nha-chong-lai-am-tham-de-bo-me-dung-ten.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/14/1786724204-toi-bo-4-trieu-mua-nha-chong-lai-am-tham-de-bo-me-dung-ten.jpg"
+  },
+  {
+    "slug": "muoi-muoi-cuop-ba-vi-hon-phu-ta-vao-cung-dang-ca-cuu-toc",
+    "title": "MUỘI MUỘI CƯỚP BA VỊ HÔN PHU, TA VÀO CUNG DÂNG CẢ CỬU TỘC",
+    "monkeyd": "https://monkeydd.com/muoi-muoi-cuop-ba-vi-hon-phu-ta-vao-cung-dang-ca-cuu-toc.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/14/1786723193-muoi-muoi-cuop-ba-vi-hon-phu-ta-vao-cung-dang-ca-cuu-toc.jpg"
+  },
+  {
+    "slug": "phu-than-ta-la-tran-bac-dai-tuong-quan-nguoi-ga-ta-cho-vi-thua-tuong-mat-lanh",
+    "title": "PHỤ THÂN TA LÀ TRẤN BẮC ĐẠI TƯỚNG QUÂN, NGƯỜI GẢ TA CHO VỊ THỪA TƯỚNG MẶT LẠNH",
+    "monkeyd": "https://monkeydd.com/phu-than-ta-la-tran-bac-dai-tuong-quan-nguoi-ga-ta-cho-vi-thua-tuong-mat-lanh.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/14/1786722751-phu-than-ta-la-tran-bac-dai-tuong-quan-nguoi-ga-ta-cho-vi-thua-tuong-mat-lanh.jpg"
+  },
+  {
+    "slug": "bi-nhot-trong-my-mong-ta-lat-do-ca-hoang-trieu",
+    "title": "BỊ NHỐT TRONG MỸ MỘNG, TA LẬT ĐỔ CẢ HOÀNG TRIỀU",
+    "monkeyd": "https://monkeydd.com/bi-nhot-trong-my-mong-ta-lat-do-ca-hoang-trieu.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/14/1786641082-bi-nhot-trong-my-mong-ta-lat-do-ca-hoang-trieu.jpg"
+  },
+  {
+    "slug": "bo-me-chong-so-toi-chiem-tai-san-toi-lien-cong-khai-4-can-ho-bac-kinh",
+    "title": "BỐ MẸ CHỒNG SỢ TÔI CHIẾM TÀI SẢN, TÔI LIỀN CÔNG KHAI 4 CĂN HỘ BẮC KINH",
+    "monkeyd": "https://monkeydd.com/bo-me-chong-so-toi-chiem-tai-san-toi-lien-cong-khai-4-can-ho-bac-kinh.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/13/1786640128-bo-me-chong-so-toi-chiem-tai-san-toi-lien-cong-khai-4-can-ho-bac-kinh.jpg"
+  },
+  {
+    "slug": "nhan-ngoc-lo-duyen-xua-kiep-nay-tu-chon-luong-nhan",
+    "title": "NHẪN NGỌC LỠ DUYÊN XƯA, KIẾP NÀY TỰ CHỌN LƯƠNG NHÂN",
+    "monkeyd": "https://monkeydd.com/nhan-ngoc-lo-duyen-xua-kiep-nay-tu-chon-luong-nhan.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/13/1786639885-nhan-ngoc-lo-duyen-xua-kiep-nay-tu-chon-luong-nhan.jpg"
+  },
+  {
+    "slug": "ga-vao-hau-phu-ba-nam-ta-bo-thuoc-vao-bat-cua-tung-nguoi",
+    "title": "GẢ VÀO HẦU PHỦ BA NĂM, TA BỎ THUỐC VÀO BÁT CỦA TỪNG NGƯỜI",
+    "monkeyd": "https://monkeydd.com/ga-vao-hau-phu-ba-nam-ta-bo-thuoc-vao-bat-cua-tung-nguoi.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/13/1786639368-ga-vao-hau-phu-ba-nam-ta-bo-thuoc-vao-bat-cua-tung-nguoi.jpg"
+  },
+  {
+    "slug": "toi-nop-don-nghi-viec-ca-cong-ty-moi-biet-ai-la-nguoi-ganh-tat-ca",
+    "title": "TÔI NỘP ĐƠN NGHỈ VIỆC, CẢ CÔNG TY MỚI BIẾT AI LÀ NGƯỜI GÁNH TẤT CẢ",
+    "monkeyd": "https://monkeydd.com/toi-nop-don-nghi-viec-ca-cong-ty-moi-biet-ai-la-nguoi-ganh-tat-ca.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/13/1786638829-toi-nop-don-nghi-viec-ca-cong-ty-moi-biet-ai-la-nguoi-ganh-tat-ca.jpg"
+  },
+  {
+    "slug": "em-dau-duoc-ca-nha-cung-chieu-toi-lai-bi-coi-nhu-nguoi-ngoai",
+    "title": "EM DÂU ĐƯỢC CẢ NHÀ CƯNG CHIỀU, TÔI LẠI BỊ COI NHƯ NGƯỜI NGOÀI",
+    "monkeyd": "https://monkeydd.com/em-dau-duoc-ca-nha-cung-chieu-toi-lai-bi-coi-nhu-nguoi-ngoai.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/13/1786638074-em-dau-duoc-ca-nha-cung-chieu-toi-lai-bi-coi-nhu-nguoi-ngoai.jpg"
+  },
+  {
+    "slug": "tuong-quan-phu-tinh-tro-ve-ta-giau-con-doan-duyen",
+    "title": "TƯỚNG QUÂN PHỤ TÌNH TRỞ VỀ, TA GIẤU CON ĐOẠN DUYÊN",
+    "monkeyd": "https://monkeydd.com/tuong-quan-phu-tinh-tro-ve-ta-giau-con-doan-duyen.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/12/1786549603-tuong-quan-phu-tinh-tro-ve-ta-giau-con-doan-duyen.jpg"
+  },
+  {
+    "slug": "ty-ty-tranh-ga-chong-ngheo-ta-ga-vao-thuong-thu-phu",
+    "title": "TỶ TỶ TRANH GẢ CHỒNG NGHÈO, TA GẢ VÀO THƯỢNG THƯ PHỦ",
+    "monkeyd": "https://monkeydd.com/ty-ty-tranh-ga-chong-ngheo-ta-ga-vao-thuong-thu-phu.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/12/1786549018-ty-ty-tranh-ga-chong-ngheo-ta-ga-vao-thuong-thu-phu.jpg"
+  },
+  {
+    "slug": "anh-tu-the-than-doi-lai-mot-doi-an-ninh",
+    "title": "ẢNH TỬ THẾ THÂN, ĐỔI LẠI MỘT ĐỜI AN NINH",
+    "monkeyd": "https://monkeydd.com/anh-tu-the-than-doi-lai-mot-doi-an-ninh.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/12/1786548658-anh-tu-the-than-doi-lai-mot-doi-an-ninh.jpg"
+  },
+  {
+    "slug": "me-ep-chong-toi-nhuong-xe-cho-em-gai-chong-toi-dut-khoat-vach-ranh-gioi",
+    "title": "MẸ ÉP CHỒNG TÔI NHƯỜNG XE CHO EM GÁI, CHỒNG TÔI DỨT KHOÁT VẠCH RANH GIỚI",
+    "monkeyd": "https://monkeydd.com/me-ep-chong-toi-nhuong-xe-cho-em-gai-chong-toi-dut-khoat-vach-ranh-gioi.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/12/1786548313-me-ep-chong-toi-nhuong-xe-cho-em-gai-chong-toi-dut-khoat-vach-ranh-gioi.jpg"
+  },
+  {
+    "slug": "vua-don-bo-me-vo-ve-nha-bo-me-toi-lien-ngung-tra-khoan-vay",
+    "title": "VỪA ĐÓN BỐ MẸ VỢ VỀ NHÀ, BỐ MẸ TÔI LIỀN NGỪNG TRẢ KHOẢN VAY",
+    "monkeyd": "https://monkeydd.com/vua-don-bo-me-vo-ve-nha-bo-me-toi-lien-ngung-tra-khoan-vay.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/12/1786547471-vua-don-bo-me-vo-ve-nha-bo-me-toi-lien-ngung-tra-khoan-vay.jpg"
+  },
+  {
+    "slug": "kinh-tra-bi-ep-nop-tien-toi-thang-tay-vach-ranh-gioi",
+    "title": "KÍNH TRÀ BỊ ÉP NỘP TIỀN, TÔI THẲNG TAY VẠCH RANH GIỚI",
+    "monkeyd": "https://monkeydd.com/kinh-tra-bi-ep-nop-tien-toi-thang-tay-vach-ranh-gioi.html",
+    "audio": "",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "cover": "https://cdn.monkeydarchive.com/images/story/thumbs/230/2026/08/12/1786547270-kinh-tra-bi-ep-nop-tien-toi-thang-tay-vach-ranh-gioi.jpg"
   }
 ]
