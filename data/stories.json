@@ -1,5 +1,70 @@
 [
   {
+    "slug": "han-ep-ta-di-hoa-than-ta-lien-ga-cho-tieu-vuong-tu-mac-bac",
+    "title": "HẮN ÉP TA ĐI HÒA THÂN, TA LIỀN GẢ CHO TIỂU VƯƠNG TỬ MẠC BẮC",
+    "monkeyd": "https://monkeydd.com/han-ep-ta-di-hoa-than-ta-lien-ga-cho-tieu-vuong-tu-mac-bac.html",
+    "audio": "https://monkeydaudio.com/han-ep-ta-di-hoa-than-ta-lien-ga-cho-tieu-vuong-tu-mac-bac.html",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/10/02/1790955884-han-ep-ta-di-hoa-than-ta-lien-ga-cho-tieu-vuong-tu-mac-bac.jpg",
+    "favoriteRank": 0,
+    "monthlyRank": 0,
+    "monthlyViews": 0,
+    "listOrder": 1,
+    "cover": "assets/covers/han-ep-ta-di-hoa-than-ta-lien-ga-cho-tieu-vuong-tu-mac-bac.webp"
+  },
+  {
+    "slug": "mau-than-ta-la-truong-cong-chua-chieu-duong",
+    "title": "MẪU THÂN TA LÀ TRƯỞNG CÔNG CHÚA CHIÊU DƯƠNG",
+    "monkeyd": "https://monkeydd.com/mau-than-ta-la-truong-cong-chua-chieu-duong.html",
+    "audio": "https://monkeydaudio.com/mau-than-ta-la-truong-cong-chua-chieu-duong.html",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/10/02/1790955504-mau-than-ta-la-truong-cong-chua-chieu-duong.jpg",
+    "favoriteRank": 0,
+    "monthlyRank": 0,
+    "monthlyViews": 0,
+    "listOrder": 2,
+    "cover": "assets/covers/mau-than-ta-la-truong-cong-chua-chieu-duong.webp"
+  },
+  {
+    "slug": "chong-len-vay-tien-cho-em-trai-toi-lap-tuc-khoi-kien",
+    "title": "CHỒNG LÉN VAY TIỀN CHO EM TRAI, TÔI LẬP TỨC KHỞI KIỆN",
+    "monkeyd": "https://monkeydd.com/chong-len-vay-tien-cho-em-trai-toi-lap-tuc-khoi-kien.html",
+    "audio": "https://monkeydaudio.com/chong-len-vay-tien-cho-em-trai-toi-lap-tuc-khoi-kien.html",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/10/02/1790954891-chong-len-vay-tien-cho-em-trai-toi-lap-tuc-khoi-kien.jpg",
+    "favoriteRank": 0,
+    "monthlyRank": 0,
+    "monthlyViews": 0,
+    "listOrder": 3,
+    "cover": "assets/covers/chong-len-vay-tien-cho-em-trai-toi-lap-tuc-khoi-kien.webp"
+  },
+  {
+    "slug": "ta-van-chau-gap-lai-chang-tuong-phung",
+    "title": "TẠ VĂN CHÂU, GẶP LẠI CHẲNG TƯƠNG PHÙNG",
+    "monkeyd": "https://monkeydd.com/ta-van-chau-gap-lai-chang-tuong-phung.html",
+    "audio": "https://monkeydaudio.com/ta-van-chau-gap-lai-chang-tuong-phung.html",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/10/02/1790874115-ta-van-chau-gap-lai-chang-tuong-phung.jpg",
+    "favoriteRank": 0,
+    "monthlyRank": 0,
+    "monthlyViews": 0,
+    "listOrder": 4,
+    "cover": "assets/covers/ta-van-chau-gap-lai-chang-tuong-phung.webp"
+  },
+  {
+    "slug": "thanh-hon-muoi-lam-nam-cha-ta-lai-cuoi-binh-the-o-ben-ngoai",
+    "title": "THÀNH HÔN MƯỜI LĂM NĂM, CHA TA LẠI CƯỚI BÌNH THÊ Ở BÊN NGOÀI",
+    "monkeyd": "https://monkeydd.com/thanh-hon-muoi-lam-nam-cha-ta-lai-cuoi-binh-the-o-ben-ngoai.html",
+    "audio": "https://monkeydaudio.com/thanh-hon-muoi-lam-nam-cha-ta-lai-cuoi-binh-the-o-ben-ngoai.html",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/10/01/1790869687-thanh-hon-muoi-lam-nam-cha-ta-lai-cuoi-binh-the-o-ben-ngoai.jpg",
+    "favoriteRank": 0,
+    "monthlyRank": 4,
+    "monthlyViews": 2263,
+    "listOrder": 5,
+    "cover": "assets/covers/thanh-hon-muoi-lam-nam-cha-ta-lai-cuoi-binh-the-o-ben-ngoai.webp"
+  },
+  {
     "slug": "em-chong-o-cu-duoc-an-ba-muoi-con-ga-den-luot-toi-chi-co-com-thua",
     "title": "EM CHỒNG Ở CỮ ĐƯỢC ĂN BA MƯƠI CON GÀ, ĐẾN LƯỢT TÔI CHỈ CÓ CƠM THỪA",
     "monkeyd": "https://monkeydd.com/em-chong-o-cu-duoc-an-ba-muoi-con-ga-den-luot-toi-chi-co-com-thua.html",
@@ -7,9 +72,9 @@
     "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
     "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/10/01/1790869248-em-chong-o-cu-duoc-an-ba-muoi-con-ga-den-luot-toi-chi-co-com-thua.jpg",
     "favoriteRank": 0,
-    "monthlyRank": 0,
-    "monthlyViews": 0,
-    "listOrder": 1,
+    "monthlyRank": 10,
+    "monthlyViews": 1534,
+    "listOrder": 6,
     "cover": "assets/covers/em-chong-o-cu-duoc-an-ba-muoi-con-ga-den-luot-toi-chi-co-com-thua.webp"
   },
   {
@@ -22,7 +87,7 @@
     "favoriteRank": 0,
     "monthlyRank": 0,
     "monthlyViews": 0,
-    "listOrder": 2,
+    "listOrder": 7,
     "cover": "assets/covers/chi-chong-doi-toi-nhuong-nha-cho-con-trai-thi-dai-hoc.webp"
   },
   {
@@ -35,7 +100,7 @@
     "favoriteRank": 0,
     "monthlyRank": 0,
     "monthlyViews": 0,
-    "listOrder": 3,
+    "listOrder": 8,
     "cover": "assets/covers/hanh-hoa-nguyet-anh-may-lan-ngoanh-lai.webp"
   },
   {
@@ -46,9 +111,9 @@
     "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
     "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/10/01/1790868679-chieu-ngo.jpg",
     "favoriteRank": 0,
-    "monthlyRank": 0,
-    "monthlyViews": 0,
-    "listOrder": 4,
+    "monthlyRank": 5,
+    "monthlyViews": 2143,
+    "listOrder": 9,
     "cover": "assets/covers/chieu-ngo.webp"
   },
   {
@@ -61,7 +126,7 @@
     "favoriteRank": 0,
     "monthlyRank": 0,
     "monthlyViews": 0,
-    "listOrder": 5,
+    "listOrder": 10,
     "cover": "assets/covers/me-chong-thien-vi-hai-con-trai-vay-toi-cung-khong-lam-con-dau-hieu-thao.webp"
   },
   {
@@ -72,9 +137,9 @@
     "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
     "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/09/30/1790787095-lam-thiep-khong-bang-lam-ngoai-that.jpg",
     "favoriteRank": 0,
-    "monthlyRank": 13,
-    "monthlyViews": 747,
-    "listOrder": 6,
+    "monthlyRank": 0,
+    "monthlyViews": 0,
+    "listOrder": 11,
     "cover": "assets/covers/lam-thiep-khong-bang-lam-ngoai-that.webp"
   },
   {
@@ -85,9 +150,9 @@
     "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
     "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/10/01/1790787999-ta-khong-tranh-sung-nhung-nam-dua-con-trai-deu-thanh-ke-khong-de-choc.jpg",
     "favoriteRank": 0,
-    "monthlyRank": 5,
-    "monthlyViews": 1413,
-    "listOrder": 7,
+    "monthlyRank": 7,
+    "monthlyViews": 1693,
+    "listOrder": 12,
     "cover": "assets/covers/ta-khong-tranh-sung-nhung-nam-dua-con-trai-deu-thanh-ke-khong-de-choc.webp"
   },
   {
@@ -98,9 +163,9 @@
     "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
     "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/09/30/1790786995-be-het-canh-noi-truong-dinh-chang-vi-chang.jpg",
     "favoriteRank": 0,
-    "monthlyRank": 3,
-    "monthlyViews": 3260,
-    "listOrder": 8,
+    "monthlyRank": 2,
+    "monthlyViews": 5171,
+    "listOrder": 13,
     "cover": "assets/covers/be-het-canh-noi-truong-dinh-chang-vi-chang.webp"
   },
   {
@@ -112,8 +177,8 @@
     "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/10/01/1790788178-hai-chi-chong-ly-hon-roi-chiem-nha-toi-toi-lap-tuc-ly-hon.jpg",
     "favoriteRank": 0,
     "monthlyRank": 1,
-    "monthlyViews": 4992,
-    "listOrder": 9,
+    "monthlyViews": 6769,
+    "listOrder": 14,
     "cover": "assets/covers/hai-chi-chong-ly-hon-roi-chiem-nha-toi-toi-lap-tuc-ly-hon.webp"
   },
   {
@@ -124,9 +189,9 @@
     "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
     "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/09/30/1790786905-trung-sinh-noi-tuyet-linh-hoa-que-chang-noi-tien-duyen.jpg",
     "favoriteRank": 0,
-    "monthlyRank": 2,
-    "monthlyViews": 3938,
-    "listOrder": 10,
+    "monthlyRank": 3,
+    "monthlyViews": 4526,
+    "listOrder": 15,
     "cover": "assets/covers/trung-sinh-noi-tuyet-linh-hoa-que-chang-noi-tien-duyen.webp"
   },
   {
@@ -139,7 +204,7 @@
     "favoriteRank": 0,
     "monthlyRank": 0,
     "monthlyViews": 0,
-    "listOrder": 11,
+    "listOrder": 16,
     "cover": "assets/covers/bay-nam-tiet-kiem-cua-toi-nha-chong-lai-tu-y-dem-cho-em-trai-mua-nha.webp"
   },
   {
@@ -152,7 +217,7 @@
     "favoriteRank": 0,
     "monthlyRank": 0,
     "monthlyViews": 0,
-    "listOrder": 12,
+    "listOrder": 17,
     "cover": "assets/covers/sinh-le-bo-ruot-tich-cop-suot-hai-muoi-nam-hoa-ra-la-mot-hop-tien-am-phu.webp"
   },
   {
@@ -163,9 +228,9 @@
     "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
     "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/09/30/1790785362-me-chong-ban-sach-cua-hoi-mon-toi-tinh-so-tung-mon.jpg",
     "favoriteRank": 0,
-    "monthlyRank": 12,
-    "monthlyViews": 794,
-    "listOrder": 13,
+    "monthlyRank": 13,
+    "monthlyViews": 1200,
+    "listOrder": 18,
     "cover": "assets/covers/me-chong-ban-sach-cua-hoi-mon-toi-tinh-so-tung-mon.webp"
   },
   {
@@ -176,9 +241,9 @@
     "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
     "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/09/29/1790696000-loi-noi-doi-thanh-su-that-chu-mau-hau-phu-phan-kich.jpg",
     "favoriteRank": 0,
-    "monthlyRank": 8,
-    "monthlyViews": 2557,
-    "listOrder": 14,
+    "monthlyRank": 14,
+    "monthlyViews": 2630,
+    "listOrder": 19,
     "cover": "assets/covers/loi-noi-doi-thanh-su-that-chu-mau-hau-phu-phan-kich.webp"
   },
   {
@@ -191,7 +256,7 @@
     "favoriteRank": 0,
     "monthlyRank": 0,
     "monthlyViews": 0,
-    "listOrder": 15,
+    "listOrder": 20,
     "cover": "assets/covers/loi-hen-cu-tan-trong-gio-thu.webp"
   },
   {
@@ -204,7 +269,7 @@
     "favoriteRank": 0,
     "monthlyRank": 0,
     "monthlyViews": 0,
-    "listOrder": 16,
+    "listOrder": 21,
     "cover": "assets/covers/em-chong-mang-con-toi-la-con-hoang-toi-khong-nhin-nua.webp"
   },
   {
@@ -215,9 +280,9 @@
     "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
     "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/09/29/1790700680-me-chong-lay-huy-cuoi-ep-toi-chia-nha-toi-huy-luon-hon-le.jpg",
     "favoriteRank": 0,
-    "monthlyRank": 10,
-    "monthlyViews": 1817,
-    "listOrder": 17,
+    "monthlyRank": 15,
+    "monthlyViews": 1942,
+    "listOrder": 22,
     "cover": "assets/covers/me-chong-lay-huy-cuoi-ep-toi-chia-nha-toi-huy-luon-hon-le.webp"
   },
   {
@@ -230,7 +295,7 @@
     "favoriteRank": 0,
     "monthlyRank": 0,
     "monthlyViews": 0,
-    "listOrder": 18,
+    "listOrder": 23,
     "cover": "assets/covers/ta-gia-vo-nhu-nhuoc-chuyen-tien-ke-bat-nat-ta-vao-duong-chet.webp"
   },
   {
@@ -243,73 +308,8 @@
     "favoriteRank": 0,
     "monthlyRank": 0,
     "monthlyViews": 0,
-    "listOrder": 19,
-    "cover": "assets/covers/khi-chang-tro-ve-ta-da-mat-duoc-ba-nam.webp"
-  },
-  {
-    "slug": "me-tu-y-goi-ca-nha-em-trai-di-du-lich-chung-toi-tra-luon-xe-thue",
-    "title": "MẸ TỰ Ý GỌI CẢ NHÀ EM TRAI ĐI DU LỊCH CHUNG, TÔI TRẢ LUÔN XE THUÊ",
-    "monkeyd": "https://monkeydd.com/me-tu-y-goi-ca-nha-em-trai-di-du-lich-chung-toi-tra-luon-xe-thue.html",
-    "audio": "https://monkeydaudio.com/me-tu-y-goi-ca-nha-em-trai-di-du-lich-chung-toi-tra-luon-xe-thue.html",
-    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
-    "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/09/29/1790693415-me-tu-y-goi-ca-nha-em-trai-di-du-lich-chung-toi-tra-luon-xe-thue.jpg",
-    "favoriteRank": 0,
-    "monthlyRank": 14,
-    "monthlyViews": 1879,
-    "listOrder": 20,
-    "cover": "assets/covers/me-tu-y-goi-ca-nha-em-trai-di-du-lich-chung-toi-tra-luon-xe-thue.webp"
-  },
-  {
-    "slug": "mau-than-bi-cuop-ten-ta-dung-ngoi-hau-doi-lai-cong-dao",
-    "title": "MẪU THÂN BỊ CƯỚP TÊN, TA DÙNG NGÔI HẬU ĐÒI LẠI CÔNG ĐẠO",
-    "monkeyd": "https://monkeydd.com/mau-than-bi-cuop-ten-ta-dung-ngoi-hau-doi-lai-cong-dao.html",
-    "audio": "https://monkeydaudio.com/mau-than-bi-cuop-ten-ta-dung-ngoi-hau-doi-lai-cong-dao.html",
-    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
-    "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/09/28/1790610338-mau-than-bi-cuop-ten-ta-dung-ngoi-hau-doi-lai-cong-dao.jpg",
-    "favoriteRank": 0,
-    "monthlyRank": 0,
-    "monthlyViews": 0,
-    "listOrder": 21,
-    "cover": "assets/covers/mau-than-bi-cuop-ten-ta-dung-ngoi-hau-doi-lai-cong-dao.webp"
-  },
-  {
-    "slug": "nam-thu-ba-lam-hien-the-o-co-dai-ta-quyet-dinh-roi-di",
-    "title": "NĂM THỨ BA LÀM HIỀN THÊ Ở CỔ ĐẠI, TA QUYẾT ĐỊNH RỜI ĐI",
-    "monkeyd": "https://monkeydd.com/nam-thu-ba-lam-hien-the-o-co-dai-ta-quyet-dinh-roi-di.html",
-    "audio": "https://monkeydaudio.com/nam-thu-ba-lam-hien-the-o-co-dai-ta-quyet-dinh-roi-di.html",
-    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
-    "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/09/28/1790609662-nam-thu-ba-lam-hien-the-o-co-dai-ta-quyet-dinh-roi-di.jpg",
-    "favoriteRank": 0,
-    "monthlyRank": 0,
-    "monthlyViews": 0,
-    "listOrder": 22,
-    "cover": "assets/covers/nam-thu-ba-lam-hien-the-o-co-dai-ta-quyet-dinh-roi-di.webp"
-  },
-  {
-    "slug": "ca-cong-ty-deu-co-thuong-cuoi-nam-chi-minh-toi-bi-gach-ten",
-    "title": "CẢ CÔNG TY ĐỀU CÓ THƯỞNG CUỐI NĂM, CHỈ MÌNH TÔI BỊ GẠCH TÊN",
-    "monkeyd": "https://monkeydd.com/ca-cong-ty-deu-co-thuong-cuoi-nam-chi-minh-toi-bi-gach-ten.html",
-    "audio": "https://monkeydaudio.com/ca-cong-ty-deu-co-thuong-cuoi-nam-chi-minh-toi-bi-gach-ten.html",
-    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
-    "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/09/28/1790611914-ca-cong-ty-deu-co-thuong-cuoi-nam-chi-minh-toi-bi-gach-ten.jpg",
-    "favoriteRank": 0,
-    "monthlyRank": 0,
-    "monthlyViews": 0,
-    "listOrder": 23,
-    "cover": "assets/covers/ca-cong-ty-deu-co-thuong-cuoi-nam-chi-minh-toi-bi-gach-ten.webp"
-  },
-  {
-    "slug": "me-chong-bao-toi-ve-nha-me-de-o-cu-toi-duoi-ca-nha-chong-ra-khoi-nha",
-    "title": "MẸ CHỒNG BẢO TÔI VỀ NHÀ MẸ ĐẺ Ở CỮ, TÔI ĐUỔI CẢ NHÀ CHỒNG RA KHỎI NHÀ",
-    "monkeyd": "https://monkeydd.com/me-chong-bao-toi-ve-nha-me-de-o-cu-toi-duoi-ca-nha-chong-ra-khoi-nha.html",
-    "audio": "https://monkeydaudio.com/me-chong-bao-toi-ve-nha-me-de-o-cu-toi-duoi-ca-nha-chong-ra-khoi-nha.html",
-    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
-    "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/09/28/1790610726-me-chong-bao-toi-ve-nha-me-de-o-cu-toi-duoi-ca-nha-chong-ra-khoi-nha.jpg",
-    "favoriteRank": 0,
-    "monthlyRank": 0,
-    "monthlyViews": 0,
     "listOrder": 24,
-    "cover": "assets/covers/me-chong-bao-toi-ve-nha-me-de-o-cu-toi-duoi-ca-nha-chong-ra-khoi-nha.webp"
+    "cover": "assets/covers/khi-chang-tro-ve-ta-da-mat-duoc-ba-nam.webp"
   },
   {
     "slug": "bi-mat",
@@ -442,19 +442,6 @@
     "cover": "assets/covers/chuc-mung-tan-lang.webp"
   },
   {
-    "slug": "ba-me-bi-chi-dau-ruong-bo-chong-toi-am-tham-chong-do-ca-gia-dinh",
-    "title": "BA MẸ BỊ CHỊ DÂU RUỒNG BỎ, CHỒNG TÔI ÂM THẦM CHỐNG ĐỠ CẢ GIA ĐÌNH",
-    "monkeyd": "https://monkeydd.com/ba-me-bi-chi-dau-ruong-bo-chong-toi-am-tham-chong-do-ca-gia-dinh.html",
-    "audio": "https://monkeydaudio.com/ba-me-bi-chi-dau-ruong-bo-chong-toi-am-tham-chong-do-ca-gia-dinh.html",
-    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
-    "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/05/11/1778515684-ba-me-bi-chi-dau-ruong-bo-chong-toi-am-tham-chong-do-ca-gia-dinh.jpg",
-    "favoriteRank": 0,
-    "monthlyRank": 4,
-    "monthlyViews": 12388,
-    "listOrder": 35,
-    "cover": "assets/covers/ba-me-bi-chi-dau-ruong-bo-chong-toi-am-tham-chong-do-ca-gia-dinh.webp"
-  },
-  {
     "slug": "biet-toi-di-ung-me-chong-nau-bua-com-tat-nien-toan-la-hai-san",
     "title": "BIẾT TÔI DỊ ỨNG, MẸ CHỒNG NẤU BỮA CƠM TẤT NIÊN TOÀN LÀ HẢI SẢN",
     "monkeyd": "https://monkeydd.com/biet-toi-di-ung-me-chong-nau-bua-com-tat-nien-toan-la-hai-san.html",
@@ -463,22 +450,35 @@
     "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/05/29/1780072664-biet-toi-di-ung-me-chong-nau-bua-com-tat-nien-toan-la-hai-san.jpg",
     "favoriteRank": 0,
     "monthlyRank": 6,
-    "monthlyViews": 17075,
-    "listOrder": 36,
+    "monthlyViews": 17557,
+    "listOrder": 35,
     "cover": "assets/covers/biet-toi-di-ung-me-chong-nau-bua-com-tat-nien-toan-la-hai-san.webp"
   },
   {
-    "slug": "quy-phi-ca-man-bi-dan-mac-tiet-lo-thien-co",
-    "title": "QUÝ PHI CÁ MẶN BỊ ĐẠN MẠC TIẾT LỘ THIÊN CƠ",
-    "monkeyd": "https://monkeydd.com/quy-phi-ca-man-bi-dan-mac-tiet-lo-thien-co.html",
-    "audio": "https://monkeydaudio.com/quy-phi-ca-man-bi-dan-mac-tiet-lo-thien-co.html",
+    "slug": "ba-me-bi-chi-dau-ruong-bo-chong-toi-am-tham-chong-do-ca-gia-dinh",
+    "title": "BA MẸ BỊ CHỊ DÂU RUỒNG BỎ, CHỒNG TÔI ÂM THẦM CHỐNG ĐỠ CẢ GIA ĐÌNH",
+    "monkeyd": "https://monkeydd.com/ba-me-bi-chi-dau-ruong-bo-chong-toi-am-tham-chong-do-ca-gia-dinh.html",
+    "audio": "https://monkeydaudio.com/ba-me-bi-chi-dau-ruong-bo-chong-toi-am-tham-chong-do-ca-gia-dinh.html",
     "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
-    "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/03/03/1772556206-quy-phi-ca-man-bi-dan-mac-tiet-lo-thien-co.jpg",
+    "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/05/11/1778515684-ba-me-bi-chi-dau-ruong-bo-chong-toi-am-tham-chong-do-ca-gia-dinh.jpg",
     "favoriteRank": 0,
-    "monthlyRank": 7,
-    "monthlyViews": 7304,
+    "monthlyRank": 8,
+    "monthlyViews": 12532,
+    "listOrder": 36,
+    "cover": "assets/covers/ba-me-bi-chi-dau-ruong-bo-chong-toi-am-tham-chong-do-ca-gia-dinh.webp"
+  },
+  {
+    "slug": "ban-trai-muon-giam-sinh-le-toi-don-sach-ca-nha-bien-mat",
+    "title": "BẠN TRAI MUỐN GIẢM SÍNH LỄ, TÔI DỌN SẠCH CẢ NHÀ BIẾN MẤT",
+    "monkeyd": "https://monkeydd.com/ban-trai-muon-giam-sinh-le-toi-don-sach-ca-nha-bien-mat.html",
+    "audio": "https://monkeydaudio.com/ban-trai-muon-giam-sinh-le-toi-don-sach-ca-nha-bien-mat.html",
+    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
+    "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/03/22/1774113056-ban-trai-muon-giam-sinh-le-toi-don-sach-ca-nha-bien-mat.jpg",
+    "favoriteRank": 0,
+    "monthlyRank": 9,
+    "monthlyViews": 29339,
     "listOrder": 37,
-    "cover": "assets/covers/quy-phi-ca-man-bi-dan-mac-tiet-lo-thien-co.webp"
+    "cover": "assets/covers/ban-trai-muon-giam-sinh-le-toi-don-sach-ca-nha-bien-mat.webp"
   },
   {
     "slug": "tham-tinh-den-muon-tua-co-rac",
@@ -488,35 +488,22 @@
     "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
     "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/05/09/1778344711-tham-tinh-den-muon-tua-co-rac.jpg",
     "favoriteRank": 0,
-    "monthlyRank": 9,
-    "monthlyViews": 12644,
+    "monthlyRank": 11,
+    "monthlyViews": 13144,
     "listOrder": 38,
     "cover": "assets/covers/tham-tinh-den-muon-tua-co-rac.webp"
   },
   {
-    "slug": "tien-duong-gia-de-cho-dau-ca-hoa-don-giao-thua-day-sang-toi",
-    "title": "TIỀN DƯỠNG GIÀ ĐỂ CHO DÂU CẢ, HÓA ĐƠN GIAO THỪA ĐẨY SANG TÔI",
-    "monkeyd": "https://monkeydd.com/tien-duong-gia-de-cho-dau-ca-hoa-don-giao-thua-day-sang-toi.html",
-    "audio": "https://monkeydaudio.com/tien-duong-gia-de-cho-dau-ca-hoa-don-giao-thua-day-sang-toi.html",
+    "slug": "quy-phi-ca-man-bi-dan-mac-tiet-lo-thien-co",
+    "title": "QUÝ PHI CÁ MẶN BỊ ĐẠN MẠC TIẾT LỘ THIÊN CƠ",
+    "monkeyd": "https://monkeydd.com/quy-phi-ca-man-bi-dan-mac-tiet-lo-thien-co.html",
+    "audio": "https://monkeydaudio.com/quy-phi-ca-man-bi-dan-mac-tiet-lo-thien-co.html",
     "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
-    "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/01/25/1769353602-tien-duong-gia-de-cho-dau-ca-hoa-don-giao-thua-day-sang-toi.jpg",
+    "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/03/03/1772556206-quy-phi-ca-man-bi-dan-mac-tiet-lo-thien-co.jpg",
     "favoriteRank": 0,
-    "monthlyRank": 11,
-    "monthlyViews": 9209,
+    "monthlyRank": 12,
+    "monthlyViews": 7464,
     "listOrder": 39,
-    "cover": "assets/covers/tien-duong-gia-de-cho-dau-ca-hoa-don-giao-thua-day-sang-toi.webp"
-  },
-  {
-    "slug": "ban-can-nha-cuoi-ca-nha-chong-cu-quy-truoc-cua-nha-toi",
-    "title": "BÁN CĂN NHÀ CƯỚI, CẢ NHÀ CHỒNG CŨ QUỲ TRƯỚC CỬA NHÀ TÔI",
-    "monkeyd": "https://monkeydd.com/ban-can-nha-cuoi-ca-nha-chong-cu-quy-truoc-cua-nha-toi.html",
-    "audio": "https://monkeydaudio.com/ban-can-nha-cuoi-ca-nha-chong-cu-quy-truoc-cua-nha-toi.html",
-    "shopee": "https://s.shopee.vn/5ArjEaR2ZS",
-    "remoteCover": "https://monkeydd.com/images/story/thumbs/230/2026/02/21/1771679897-ban-can-nha-cuoi-ca-nha-chong-cu-quy-truoc-cua-nha-toi.jpg",
-    "favoriteRank": 0,
-    "monthlyRank": 15,
-    "monthlyViews": 3801,
-    "listOrder": 40,
-    "cover": "assets/covers/ban-can-nha-cuoi-ca-nha-chong-cu-quy-truoc-cua-nha-toi.webp"
+    "cover": "assets/covers/quy-phi-ca-man-bi-dan-mac-tiet-lo-thien-co.webp"
   }
 ]
